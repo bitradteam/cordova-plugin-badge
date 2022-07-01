@@ -21,7 +21,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-badge"
-        version="0.8.8">
+        version="1.0">
 
     <name>Badge</name>
 
@@ -78,25 +78,6 @@
 
         <header-file src="src/osx/DockDownloadProgressBar.h" />
         <source-file src="src/osx/DockDownloadProgressBar.mm" />
-    </platform>
-
-    <!-- android -->
-    <platform name="android">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Badge">
-                <param name="android-package" value="de.appplant.cordova.plugin.badge.Badge"/>
-            </feature>
-        </config-file>
-
-        <framework src="src/android/badge.gradle" custom="true" type="gradleReference"/>
-
-        <source-file
-            src="src/android/Badge.java"
-            target-dir="src/de/appplant/cordova/plugin/badge" />
-
-        <source-file
-            src="src/android/BadgeImpl.java"
-            target-dir="src/de/appplant/cordova/plugin/badge" />
     </platform>
 
     <!-- browser -->
